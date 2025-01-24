@@ -27,6 +27,7 @@ import {
 import { toast } from "@/hooks/use-toast";
 import { CountrySelect } from "./CountrySelect";
 import { CurrencySelect } from "./CurrencySelect";
+import { Textarea } from "./ui/textarea";
 
 const formSchema = z.object({
   firstName: z.string().min(2, {
@@ -50,6 +51,12 @@ const formSchema = z.object({
     .regex(/^[A-Z]{4}-\d{4}$/, {
       message: "Must be in the format ABCD-1234.",
     }),
+  projectDescription: z
+    .string()
+    .min(10, { message: "Project description must be at least 10 characters." })
+    .max(150, {
+      message: "Project description should not be more than 150 characters.",
+    }),
   currency: z.string(),
   amount: z.any(),
 });
@@ -64,6 +71,7 @@ export function RequestForm() {
       country: undefined,
       currency: "",
       amount: 0,
+      projectDescription: "",
     },
   });
 
@@ -306,6 +314,28 @@ export function RequestForm() {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="projectDescription"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Project Description</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Describe the project."
+                  className="resize-none"
+                  rows={5}
+                  maxLength={150}
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription>
+                Should not exceed 150 characters.
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
