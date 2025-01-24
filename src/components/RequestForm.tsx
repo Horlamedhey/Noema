@@ -98,6 +98,7 @@ export function RequestForm() {
         },
       });
       form.reset();  
+      return;
     }).catch(()=>{
       toast({
         title:
@@ -114,6 +115,7 @@ export function RequestForm() {
           textAlign: "center",
         },
       });
+      return;
     });
  
   }
