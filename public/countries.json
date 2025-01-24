@@ -1,0 +1,1002 @@
+[
+  {
+    "name": "Afghanistan",
+    "isOPEC": false
+  },
+  {
+    "name": "Åland Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Albania",
+    "isOPEC": false
+  },
+  {
+    "name": "Algeria",
+    "isOPEC": true
+  },
+  {
+    "name": "American Samoa",
+    "isOPEC": false
+  },
+  {
+    "name": "Andorra",
+    "isOPEC": false
+  },
+  {
+    "name": "Angola",
+    "isOPEC": true
+  },
+  {
+    "name": "Anguilla",
+    "isOPEC": false
+  },
+  {
+    "name": "Antarctica",
+    "isOPEC": false
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "isOPEC": false
+  },
+  {
+    "name": "Argentina",
+    "isOPEC": false
+  },
+  {
+    "name": "Armenia",
+    "isOPEC": false
+  },
+  {
+    "name": "Aruba",
+    "isOPEC": false
+  },
+  {
+    "name": "Australia",
+    "isOPEC": false
+  },
+  {
+    "name": "Austria",
+    "isOPEC": false
+  },
+  {
+    "name": "Azerbaijan",
+    "isOPEC": false
+  },
+  {
+    "name": "Bahamas",
+    "isOPEC": false
+  },
+  {
+    "name": "Bahrain",
+    "isOPEC": false
+  },
+  {
+    "name": "Bangladesh",
+    "isOPEC": false
+  },
+  {
+    "name": "Barbados",
+    "isOPEC": false
+  },
+  {
+    "name": "Belarus",
+    "isOPEC": false
+  },
+  {
+    "name": "Belgium",
+    "isOPEC": false
+  },
+  {
+    "name": "Belize",
+    "isOPEC": false
+  },
+  {
+    "name": "Benin",
+    "isOPEC": false
+  },
+  {
+    "name": "Bermuda",
+    "isOPEC": false
+  },
+  {
+    "name": "Bhutan",
+    "isOPEC": false
+  },
+  {
+    "name": "Bolivia",
+    "isOPEC": false
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "isOPEC": false
+  },
+  {
+    "name": "Botswana",
+    "isOPEC": false
+  },
+  {
+    "name": "Bouvet Island",
+    "isOPEC": false
+  },
+  {
+    "name": "Brazil",
+    "isOPEC": false
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "isOPEC": false
+  },
+  {
+    "name": "British Virgin Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Brunei",
+    "isOPEC": false
+  },
+  {
+    "name": "Bulgaria",
+    "isOPEC": false
+  },
+  {
+    "name": "Burkina Faso",
+    "isOPEC": false
+  },
+  {
+    "name": "Burundi",
+    "isOPEC": false
+  },
+  {
+    "name": "Cambodia",
+    "isOPEC": false
+  },
+  {
+    "name": "Cameroon",
+    "isOPEC": false
+  },
+  {
+    "name": "Canada",
+    "isOPEC": false
+  },
+  {
+    "name": "Cape Verde",
+    "isOPEC": false
+  },
+  {
+    "name": "Caribbean Netherlands",
+    "isOPEC": false
+  },
+  {
+    "name": "Cayman Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Central African Republic",
+    "isOPEC": false
+  },
+  {
+    "name": "Chad",
+    "isOPEC": false
+  },
+  {
+    "name": "Chile",
+    "isOPEC": false
+  },
+  {
+    "name": "China",
+    "isOPEC": false
+  },
+  {
+    "name": "Christmas Island",
+    "isOPEC": false
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Colombia",
+    "isOPEC": false
+  },
+  {
+    "name": "Comoros",
+    "isOPEC": false
+  },
+  {
+    "name": "Cook Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Costa Rica",
+    "isOPEC": false
+  },
+  {
+    "name": "Croatia",
+    "isOPEC": false
+  },
+  {
+    "name": "Cuba",
+    "isOPEC": false
+  },
+  {
+    "name": "Curaçao",
+    "isOPEC": false
+  },
+  {
+    "name": "Cyprus",
+    "isOPEC": false
+  },
+  {
+    "name": "Czechia",
+    "isOPEC": false
+  },
+  {
+    "name": "Denmark",
+    "isOPEC": false
+  },
+  {
+    "name": "Djibouti",
+    "isOPEC": false
+  },
+  {
+    "name": "Dominica",
+    "isOPEC": false
+  },
+  {
+    "name": "Dominican Republic",
+    "isOPEC": false
+  },
+  {
+    "name": "DR Congo",
+    "isOPEC": false
+  },
+  {
+    "name": "Ecuador",
+    "isOPEC": false
+  },
+  {
+    "name": "Egypt",
+    "isOPEC": false
+  },
+  {
+    "name": "El Salvador",
+    "isOPEC": false
+  },
+  {
+    "name": "Equatorial Guinea",
+    "isOPEC": true
+  },
+  {
+    "name": "Eritrea",
+    "isOPEC": false
+  },
+  {
+    "name": "Estonia",
+    "isOPEC": false
+  },
+  {
+    "name": "Eswatini",
+    "isOPEC": false
+  },
+  {
+    "name": "Ethiopia",
+    "isOPEC": false
+  },
+  {
+    "name": "Falkland Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Faroe Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Fiji",
+    "isOPEC": false
+  },
+  {
+    "name": "Finland",
+    "isOPEC": false
+  },
+  {
+    "name": "France",
+    "isOPEC": false
+  },
+  {
+    "name": "French Guiana",
+    "isOPEC": false
+  },
+  {
+    "name": "French Polynesia",
+    "isOPEC": false
+  },
+  {
+    "name": "French Southern and Antarctic Lands",
+    "isOPEC": false
+  },
+  {
+    "name": "Gabon",
+    "isOPEC": true
+  },
+  {
+    "name": "Gambia",
+    "isOPEC": false
+  },
+  {
+    "name": "Georgia",
+    "isOPEC": false
+  },
+  {
+    "name": "Germany",
+    "isOPEC": false
+  },
+  {
+    "name": "Ghana",
+    "isOPEC": false
+  },
+  {
+    "name": "Gibraltar",
+    "isOPEC": false
+  },
+  {
+    "name": "Greece",
+    "isOPEC": false
+  },
+  {
+    "name": "Greenland",
+    "isOPEC": false
+  },
+  {
+    "name": "Grenada",
+    "isOPEC": false
+  },
+  {
+    "name": "Guadeloupe",
+    "isOPEC": false
+  },
+  {
+    "name": "Guam",
+    "isOPEC": false
+  },
+  {
+    "name": "Guatemala",
+    "isOPEC": false
+  },
+  {
+    "name": "Guernsey",
+    "isOPEC": false
+  },
+  {
+    "name": "Guinea",
+    "isOPEC": false
+  },
+  {
+    "name": "Guinea-Bissau",
+    "isOPEC": false
+  },
+  {
+    "name": "Guyana",
+    "isOPEC": false
+  },
+  {
+    "name": "Haiti",
+    "isOPEC": false
+  },
+  {
+    "name": "Heard Island and McDonald Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Honduras",
+    "isOPEC": false
+  },
+  {
+    "name": "Hong Kong",
+    "isOPEC": false
+  },
+  {
+    "name": "Hungary",
+    "isOPEC": false
+  },
+  {
+    "name": "Iceland",
+    "isOPEC": false
+  },
+  {
+    "name": "India",
+    "isOPEC": false
+  },
+  {
+    "name": "Indonesia",
+    "isOPEC": false
+  },
+  {
+    "name": "Iran",
+    "isOPEC": true
+  },
+  {
+    "name": "Iraq",
+    "isOPEC": true
+  },
+  {
+    "name": "Ireland",
+    "isOPEC": false
+  },
+  {
+    "name": "Isle of Man",
+    "isOPEC": false
+  },
+  {
+    "name": "Israel",
+    "isOPEC": false
+  },
+  {
+    "name": "Italy",
+    "isOPEC": false
+  },
+  {
+    "name": "Ivory Coast",
+    "isOPEC": false
+  },
+  {
+    "name": "Jamaica",
+    "isOPEC": false
+  },
+  {
+    "name": "Japan",
+    "isOPEC": false
+  },
+  {
+    "name": "Jersey",
+    "isOPEC": false
+  },
+  {
+    "name": "Jordan",
+    "isOPEC": false
+  },
+  {
+    "name": "Kazakhstan",
+    "isOPEC": false
+  },
+  {
+    "name": "Kenya",
+    "isOPEC": false
+  },
+  {
+    "name": "Kiribati",
+    "isOPEC": false
+  },
+  {
+    "name": "Kosovo",
+    "isOPEC": false
+  },
+  {
+    "name": "Kuwait",
+    "isOPEC": true
+  },
+  {
+    "name": "Kyrgyzstan",
+    "isOPEC": false
+  },
+  {
+    "name": "Laos",
+    "isOPEC": false
+  },
+  {
+    "name": "Latvia",
+    "isOPEC": false
+  },
+  {
+    "name": "Lebanon",
+    "isOPEC": false
+  },
+  {
+    "name": "Lesotho",
+    "isOPEC": false
+  },
+  {
+    "name": "Liberia",
+    "isOPEC": false
+  },
+  {
+    "name": "Libya",
+    "isOPEC": true
+  },
+  {
+    "name": "Liechtenstein",
+    "isOPEC": false
+  },
+  {
+    "name": "Lithuania",
+    "isOPEC": false
+  },
+  {
+    "name": "Luxembourg",
+    "isOPEC": false
+  },
+  {
+    "name": "Macau",
+    "isOPEC": false
+  },
+  {
+    "name": "Madagascar",
+    "isOPEC": false
+  },
+  {
+    "name": "Malawi",
+    "isOPEC": false
+  },
+  {
+    "name": "Malaysia",
+    "isOPEC": false
+  },
+  {
+    "name": "Maldives",
+    "isOPEC": false
+  },
+  {
+    "name": "Mali",
+    "isOPEC": false
+  },
+  {
+    "name": "Malta",
+    "isOPEC": false
+  },
+  {
+    "name": "Marshall Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Martinique",
+    "isOPEC": false
+  },
+  {
+    "name": "Mauritania",
+    "isOPEC": false
+  },
+  {
+    "name": "Mauritius",
+    "isOPEC": false
+  },
+  {
+    "name": "Mayotte",
+    "isOPEC": false
+  },
+  {
+    "name": "Mexico",
+    "isOPEC": false
+  },
+  {
+    "name": "Micronesia",
+    "isOPEC": false
+  },
+  {
+    "name": "Moldova",
+    "isOPEC": false
+  },
+  {
+    "name": "Monaco",
+    "isOPEC": false
+  },
+  {
+    "name": "Mongolia",
+    "isOPEC": false
+  },
+  {
+    "name": "Montenegro",
+    "isOPEC": false
+  },
+  {
+    "name": "Montserrat",
+    "isOPEC": false
+  },
+  {
+    "name": "Morocco",
+    "isOPEC": false
+  },
+  {
+    "name": "Mozambique",
+    "isOPEC": false
+  },
+  {
+    "name": "Myanmar",
+    "isOPEC": false
+  },
+  {
+    "name": "Namibia",
+    "isOPEC": false
+  },
+  {
+    "name": "Nauru",
+    "isOPEC": false
+  },
+  {
+    "name": "Nepal",
+    "isOPEC": false
+  },
+  {
+    "name": "Netherlands",
+    "isOPEC": false
+  },
+  {
+    "name": "New Caledonia",
+    "isOPEC": false
+  },
+  {
+    "name": "New Zealand",
+    "isOPEC": false
+  },
+  {
+    "name": "Nicaragua",
+    "isOPEC": false
+  },
+  {
+    "name": "Niger",
+    "isOPEC": false
+  },
+  {
+    "name": "Nigeria",
+    "isOPEC": true
+  },
+  {
+    "name": "Niue",
+    "isOPEC": false
+  },
+  {
+    "name": "Norfolk Island",
+    "isOPEC": false
+  },
+  {
+    "name": "North Korea",
+    "isOPEC": false
+  },
+  {
+    "name": "North Macedonia",
+    "isOPEC": false
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Norway",
+    "isOPEC": false
+  },
+  {
+    "name": "Oman",
+    "isOPEC": false
+  },
+  {
+    "name": "Pakistan",
+    "isOPEC": false
+  },
+  {
+    "name": "Palau",
+    "isOPEC": false
+  },
+  {
+    "name": "Palestine",
+    "isOPEC": false
+  },
+  {
+    "name": "Panama",
+    "isOPEC": false
+  },
+  {
+    "name": "Papua New Guinea",
+    "isOPEC": false
+  },
+  {
+    "name": "Paraguay",
+    "isOPEC": false
+  },
+  {
+    "name": "Peru",
+    "isOPEC": false
+  },
+  {
+    "name": "Philippines",
+    "isOPEC": false
+  },
+  {
+    "name": "Pitcairn Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Poland",
+    "isOPEC": false
+  },
+  {
+    "name": "Portugal",
+    "isOPEC": false
+  },
+  {
+    "name": "Puerto Rico",
+    "isOPEC": false
+  },
+  {
+    "name": "Qatar",
+    "isOPEC": false
+  },
+  {
+    "name": "Republic of the Congo",
+    "isOPEC": false
+  },
+  {
+    "name": "Réunion",
+    "isOPEC": false
+  },
+  {
+    "name": "Romania",
+    "isOPEC": false
+  },
+  {
+    "name": "Russia",
+    "isOPEC": false
+  },
+  {
+    "name": "Rwanda",
+    "isOPEC": false
+  },
+  {
+    "name": "Saint Barthélemy",
+    "isOPEC": false
+  },
+  {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "isOPEC": false
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "isOPEC": false
+  },
+  {
+    "name": "Saint Lucia",
+    "isOPEC": false
+  },
+  {
+    "name": "Saint Martin",
+    "isOPEC": false
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "isOPEC": false
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "isOPEC": false
+  },
+  {
+    "name": "Samoa",
+    "isOPEC": false
+  },
+  {
+    "name": "San Marino",
+    "isOPEC": false
+  },
+  {
+    "name": "São Tomé and Príncipe",
+    "isOPEC": false
+  },
+  {
+    "name": "Saudi Arabia",
+    "isOPEC": true
+  },
+  {
+    "name": "Senegal",
+    "isOPEC": false
+  },
+  {
+    "name": "Serbia",
+    "isOPEC": false
+  },
+  {
+    "name": "Seychelles",
+    "isOPEC": false
+  },
+  {
+    "name": "Sierra Leone",
+    "isOPEC": false
+  },
+  {
+    "name": "Singapore",
+    "isOPEC": false
+  },
+  {
+    "name": "Sint Maarten",
+    "isOPEC": false
+  },
+  {
+    "name": "Slovakia",
+    "isOPEC": false
+  },
+  {
+    "name": "Slovenia",
+    "isOPEC": false
+  },
+  {
+    "name": "Solomon Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Somalia",
+    "isOPEC": false
+  },
+  {
+    "name": "South Africa",
+    "isOPEC": false
+  },
+  {
+    "name": "South Georgia",
+    "isOPEC": false
+  },
+  {
+    "name": "South Korea",
+    "isOPEC": false
+  },
+  {
+    "name": "South Sudan",
+    "isOPEC": false
+  },
+  {
+    "name": "Spain",
+    "isOPEC": false
+  },
+  {
+    "name": "Sri Lanka",
+    "isOPEC": false
+  },
+  {
+    "name": "Sudan",
+    "isOPEC": false
+  },
+  {
+    "name": "Suriname",
+    "isOPEC": false
+  },
+  {
+    "name": "Svalbard and Jan Mayen",
+    "isOPEC": false
+  },
+  {
+    "name": "Sweden",
+    "isOPEC": false
+  },
+  {
+    "name": "Switzerland",
+    "isOPEC": false
+  },
+  {
+    "name": "Syria",
+    "isOPEC": false
+  },
+  {
+    "name": "Taiwan",
+    "isOPEC": false
+  },
+  {
+    "name": "Tajikistan",
+    "isOPEC": false
+  },
+  {
+    "name": "Tanzania",
+    "isOPEC": false
+  },
+  {
+    "name": "Thailand",
+    "isOPEC": false
+  },
+  {
+    "name": "Timor-Leste",
+    "isOPEC": false
+  },
+  {
+    "name": "Togo",
+    "isOPEC": false
+  },
+  {
+    "name": "Tokelau",
+    "isOPEC": false
+  },
+  {
+    "name": "Tonga",
+    "isOPEC": false
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "isOPEC": false
+  },
+  {
+    "name": "Tunisia",
+    "isOPEC": false
+  },
+  {
+    "name": "Turkey",
+    "isOPEC": false
+  },
+  {
+    "name": "Turkmenistan",
+    "isOPEC": false
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Tuvalu",
+    "isOPEC": false
+  },
+  {
+    "name": "Uganda",
+    "isOPEC": false
+  },
+  {
+    "name": "Ukraine",
+    "isOPEC": false
+  },
+  {
+    "name": "United Arab Emirates",
+    "isOPEC": true
+  },
+  {
+    "name": "United Kingdom",
+    "isOPEC": false
+  },
+  {
+    "name": "United States",
+    "isOPEC": false
+  },
+  {
+    "name": "United States Minor Outlying Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "United States Virgin Islands",
+    "isOPEC": false
+  },
+  {
+    "name": "Uruguay",
+    "isOPEC": false
+  },
+  {
+    "name": "Uzbekistan",
+    "isOPEC": false
+  },
+  {
+    "name": "Vanuatu",
+    "isOPEC": false
+  },
+  {
+    "name": "Vatican City",
+    "isOPEC": false
+  },
+  {
+    "name": "Venezuela",
+    "isOPEC": true
+  },
+  {
+    "name": "Vietnam",
+    "isOPEC": false
+  },
+  {
+    "name": "Wallis and Futuna",
+    "isOPEC": false
+  },
+  {
+    "name": "Western Sahara",
+    "isOPEC": false
+  },
+  {
+    "name": "Yemen",
+    "isOPEC": false
+  },
+  {
+    "name": "Zambia",
+    "isOPEC": false
+  },
+  {
+    "name": "Zimbabwe",
+    "isOPEC": false
+  }
+]
