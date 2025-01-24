@@ -1,14 +1,14 @@
-"use client";
+ "use client";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { CalendarIcon, CircleCheckBig } from "lucide-react";
+import { CalendarIcon, CircleCheckBig, CircleX } from "lucide-react";
 import { format } from "date-fns";
 
 import { cn, daysFromNow } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+import { Calendar } from "@/components/ui/calendar"; 
 import {
   Form,
   FormControl,
@@ -81,23 +81,41 @@ export function RequestForm() {
     fetch("http://test-noema-api.azurewebsites.net/api/requests", {
       method: "POST",
       body: JSON.stringify({ ...rest, country: selectedCountry }),
+    }).then(()=>{
+      toast({
+        title:
+          "You have submitted a financing request. You will hear back from us shortly.",
+        description: (
+          <div className="flex justify-center mt-5">
+            <CircleCheckBig
+              size={86}
+              color="green"
+            />
+          </div>
+        ),
+        style: {
+          textAlign: "center",
+        },
+      });
+      form.reset();  
+    }).catch(()=>{
+      toast({
+        title:
+          "Oops! There was an error submitting your request, please try again later.",
+        description: (
+          <div className="flex justify-center mt-5">
+            <CircleX
+              size={86}
+              color="red"
+            />
+          </div>
+        ),
+        style: {
+          textAlign: "center",
+        },
+      });
     });
-    toast({
-      title:
-        "You have submitted a financing request. You will hear back from us shortly.",
-      description: (
-        <div className="flex justify-center mt-5">
-          <CircleCheckBig
-            size={86}
-            color="green"
-          />
-        </div>
-      ),
-      style: {
-        textAlign: "center",
-      },
-    });
-    form.reset();
+ 
   }
 
   return (
