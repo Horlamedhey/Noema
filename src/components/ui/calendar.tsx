@@ -117,7 +117,7 @@ function Calendar({
                 {props?.caption}
               </SelectValue>
             </SelectTrigger>
-            <SelectContent className="scrolling-auto max-h-[300px] min-[var(--radix-popper-anchor-width)] overflow-y-auto">
+            <SelectContent className="scrolling-auto max-h-72 min-[var(--radix-popper-anchor-width)] overflow-y-auto">
               {props.children &&
                 React.Children.map(props.children, (child) => (
                   <SelectItem

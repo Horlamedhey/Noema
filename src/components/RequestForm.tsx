@@ -143,7 +143,7 @@ export function RequestForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8"
+        className="space-y-8 max-w-[750px]"
       >
         <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2">
           <FormField
