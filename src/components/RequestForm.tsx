@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { CalendarIcon, CircleCheckBig, CircleX } from "lucide-react";
+import { CalendarIcon, CircleCheckBig } from "lucide-react";
 import { format } from "date-fns";
 
 import { cn, daysFromNow } from "@/lib/utils";
