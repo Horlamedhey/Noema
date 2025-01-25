@@ -99,24 +99,25 @@ export function RequestForm() {
       });
       form.reset();  
       return;
-    }).catch(()=>{
-      toast({
-        title:
-          "Oops! There was an error submitting your request, please try again later.",
-        description: (
-          <div className="flex justify-center mt-5">
-            <CircleX
-              size={86}
-              color="red"
-            />
-          </div>
-        ),
-        style: {
-          textAlign: "center",
-        },
-      });
-      return;
-    });
+    })
+    // .catch(()=>{
+    //   toast({
+    //     title:
+    //       "Oops! There was an error submitting your request, please try again later.",
+    //     description: (
+    //       <div className="flex justify-center mt-5">
+    //         <CircleX
+    //           size={86}
+    //           color="red"
+    //         />
+    //       </div>
+    //     ),
+    //     style: {
+    //       textAlign: "center",
+    //     },
+    //   });
+    //   return;
+   // });
  
   }
 
