@@ -10,7 +10,7 @@ export function Header() {
       case "/":
         return "Home";
       case "/submit-request":
-        return "Submit Request";
+        return "Submit Financing Request";
       default:
         return "Dashboard";
     }
@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="flex items-center border-b md:py-[0.87rem] py-2  px-4 md:px-6">
       <MobileSidebarToggle />
-      <h1 className="text-xl font-semibold md:text-2xl">{title}</h1>
+      <h1 className="text-lg sm:text-xl font-semibold md:text-2xl">{title}</h1>
     </header>
   );
 }

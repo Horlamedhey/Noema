@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { CalendarIcon, CircleCheckBig, CircleX } from "lucide-react";
+import { CalendarIcon, CircleCheckBig, CircleX, Info } from "lucide-react";
 import { format } from "date-fns";
 
 import { cn, daysFromNow } from "@/lib/utils";
@@ -28,6 +28,7 @@ import { toast } from "@/hooks/use-toast";
 import { CountrySelect } from "./CountrySelect";
 import { CurrencySelect } from "./CurrencySelect";
 import { Textarea } from "./ui/textarea";
+import { useMemo, useState } from "react";
 
 const formSchema = z.object({
   firstName: z.string().min(2, {
@@ -74,6 +75,25 @@ export function RequestForm() {
       projectDescription: "",
     },
   });
+  const [country, startDate] = form.watch(["country", "startDate"]);
+  const [startCalendarOpen, setStartCalendarOpen] = useState(false);
+  const [endCalendarOpen, setEndCalendarOpen] = useState(false);
+
+  const countryIsOpec = useMemo(() => {
+    const isOPEC = JSON.parse(country ?? "{}").isOPEC;
+    if (isOPEC)
+      form.setValue("currency", "USD", {
+        shouldDirty: true,
+        shouldTouch: true,
+      });
+    return isOPEC;
+  }, [country]);
+
+  const endDateDefaultMonth = useMemo<Date>(() => {
+    const date = startDate ? new Date(startDate) : new Date();
+    date.setFullYear(date.getFullYear() + 1);
+    return date;
+  }, [startDate]);
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const { country, ...rest } = values;
@@ -159,101 +179,6 @@ export function RequestForm() {
             )}
           />
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2">
-          <FormField
-            control={form.control}
-            name="startDate"
-            render={({ field }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel>Start date</FormLabel>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <FormControl>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "pl-3 text-left font-normal",
-                          !field.value && "text-muted-foreground"
-                        )}
-                      >
-                        {field.value ? (
-                          format(field.value, "PPP")
-                        ) : (
-                          <span>Pick validity start date</span>
-                        )}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                      </Button>
-                    </FormControl>
-                  </PopoverTrigger>
-                  <PopoverContent
-                    className="w-auto p-0"
-                    align="start"
-                  >
-                    <Calendar
-                      mode="single"
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) => date < daysFromNow(15)}
-                      initialFocus
-                    />
-                  </PopoverContent>
-                </Popover>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="endDate"
-            render={({ field }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel>End date</FormLabel>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <FormControl>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "pl-3 text-left font-normal",
-                          !field.value && "text-muted-foreground"
-                        )}
-                      >
-                        {field.value ? (
-                          format(field.value, "PPP")
-                        ) : (
-                          <span>Pick validity end date</span>
-                        )}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                      </Button>
-                    </FormControl>
-                  </PopoverTrigger>
-                  <PopoverContent
-                    className="w-auto p-0"
-                    align="start"
-                  >
-                    <Calendar
-                      mode="single"
-                      selected={field.value}
-                      onSelect={field.onChange}
-                      disabled={(date) => {
-                        const startDate = form.getValues("startDate");
-                        const minDate = startDate
-                          ? new Date(startDate)
-                          : daysFromNow(15);
-                        const maxDate = new Date(minDate);
-                        minDate.setFullYear(minDate.getFullYear() + 1);
-                        maxDate.setFullYear(maxDate.getFullYear() + 3);
-                        return date < minDate || date > maxDate;
-                      }}
-                      initialFocus
-                    />
-                  </PopoverContent>
-                </Popover>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
         <FormField
           control={form.control}
           name="country"
@@ -262,15 +187,9 @@ export function RequestForm() {
               <FormLabel>Country</FormLabel>
               <FormControl>
                 <CountrySelect
-                  onValueChange={(value: string) => {
-                    field.onChange(value);
-                    if (JSON.parse(value).isOPEC)
-                      form.setValue("currency", "USD", {
-                        shouldDirty: true,
-                        shouldTouch: true,
-                      });
-                  }}
+                  onValueChange={field.onChange}
                   defaultValue={field.value}
+                  value={field.value}
                 />
               </FormControl>
               <FormDescription>
@@ -289,9 +208,7 @@ export function RequestForm() {
                 <FormLabel>Currency</FormLabel>
                 <FormControl>
                   <CurrencySelect
-                    disabled={
-                      JSON.parse(form.getValues("country") ?? "{}").isOPEC
-                    }
+                    disabled={countryIsOpec}
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                     value={field.value}
@@ -359,6 +276,160 @@ export function RequestForm() {
             </FormItem>
           )}
         />
+        <div>
+          <h3>Validity period</h3>
+          <p className="text-blue-700">
+            <Info
+              size={16}
+              className="inline mr-1"
+            />
+            <span className="text-xs">
+              Start date should be at least 15 days from date of submission and
+              End date should be between 1 to 3 years from the Start date.
+            </span>
+          </p>
+          <div className="grid grid-rows-2 sm:grid-rows-1 grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2 mt-6">
+            <FormField
+              control={form.control}
+              name="startDate"
+              render={({ field }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel>Start date</FormLabel>
+                  <Popover
+                    open={startCalendarOpen}
+                    onOpenChange={setStartCalendarOpen}
+                  >
+                    <PopoverTrigger asChild>
+                      <FormControl>
+                        <Button
+                          variant={"outline"}
+                          className={cn(
+                            "flex w-full justify-between px-4 py-3.5 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          )}
+                        >
+                          {field.value ? (
+                            format(field.value, "PPP")
+                          ) : (
+                            <span>Pick validity start date</span>
+                          )}
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent
+                      className="w-auto p-0"
+                      align="start"
+                    >
+                      <Calendar
+                        captionLayout="dropdown-buttons"
+                        mode="single"
+                        fromYear={new Date().getFullYear()}
+                        toYear={new Date().getFullYear() + 50}
+                        defaultMonth={new Date()}
+                        numberOfMonths={2}
+                        selected={field.value}
+                        onSelect={(value) => {
+                          field.onChange(value);
+                          setStartCalendarOpen(false);
+                        }}
+                        disabled={(date) => date < daysFromNow(15)}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="endDate"
+              render={({ field }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel>End date</FormLabel>
+                  <Popover
+                    open={endCalendarOpen}
+                    onOpenChange={setEndCalendarOpen}
+                  >
+                    <PopoverTrigger asChild>
+                      <FormControl>
+                        <Button
+                          variant={"outline"}
+                          className={cn(
+                            "flex w-full justify-between px-4 py-3.5 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          )}
+                        >
+                          {field.value ? (
+                            format(field.value, "PPP")
+                          ) : (
+                            <span>Pick validity end date</span>
+                          )}
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent
+                      className="w-auto p-0"
+                      align="start"
+                    >
+                      <Calendar
+                        captionLayout="dropdown-buttons"
+                        mode="single"
+                        fromYear={new Date().getFullYear()}
+                        toYear={new Date().getFullYear() + 50}
+                        defaultMonth={new Date()}
+                        numberOfMonths={2}
+                        selected={field.value}
+                        onSelect={(value) => {
+                          field.onChange(value);
+                          setEndCalendarOpen(false);
+                        }}
+                        disabled={(date) => {
+                          const minDate = startDate
+                            ? new Date(startDate)
+                            : daysFromNow(15);
+                          const maxDate = new Date(minDate);
+                          minDate.setFullYear(minDate.getFullYear() + 1);
+                          maxDate.setFullYear(maxDate.getFullYear() + 3);
+                          return date < minDate || date > maxDate;
+                        }}
+                        initialFocus
+                      />
+                      <div className="bg-red-500 h-2"></div>
+                      <Calendar
+                        className="mt-4"
+                        captionLayout="dropdown-buttons"
+                        mode="single"
+                        fromYear={new Date().getFullYear()}
+                        toYear={new Date().getFullYear() + 50}
+                        defaultMonth={endDateDefaultMonth}
+                        numberOfMonths={2}
+                        selected={field.value}
+                        onSelect={(value) => {
+                          field.onChange(value);
+                          setEndCalendarOpen(false);
+                        }}
+                        disabled={(date) => {
+                          const minDate = startDate
+                            ? new Date(startDate)
+                            : daysFromNow(15);
+                          const maxDate = new Date(minDate);
+                          minDate.setFullYear(minDate.getFullYear() + 1);
+                          maxDate.setFullYear(maxDate.getFullYear() + 3);
+                          return date < minDate || date > maxDate;
+                        }}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        </div>
         <Button type="submit">Submit</Button>
       </form>
     </Form>
