@@ -375,30 +375,6 @@ export function RequestForm() {
                       align="start"
                     >
                       <Calendar
-                        captionLayout="dropdown-buttons"
-                        mode="single"
-                        fromYear={new Date().getFullYear()}
-                        toYear={new Date().getFullYear() + 50}
-                        defaultMonth={new Date()}
-                        numberOfMonths={2}
-                        selected={field.value}
-                        onSelect={(value) => {
-                          field.onChange(value);
-                          setEndCalendarOpen(false);
-                        }}
-                        disabled={(date) => {
-                          const minDate = startDate
-                            ? new Date(startDate)
-                            : daysFromNow(15);
-                          const maxDate = new Date(minDate);
-                          minDate.setFullYear(minDate.getFullYear() + 1);
-                          maxDate.setFullYear(maxDate.getFullYear() + 3);
-                          return date < minDate || date > maxDate;
-                        }}
-                        initialFocus
-                      />
-                      <div className="bg-red-500 h-2"></div>
-                      <Calendar
                         className="mt-4"
                         captionLayout="dropdown-buttons"
                         mode="single"
